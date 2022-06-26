@@ -1,7 +1,14 @@
+import React, { useState } from "react";
+
 function ButtonBar(props) {
-  // in ButtonBar.js
+  const [theInput, setTheInput] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.handleInput(theInput);
+    e.target.reset();
+  };
   return (
-    <div>
+    <div className="buttons">
       <button value={-5} onClick={props.handleIterate}>
         Way Back
       </button>
@@ -14,6 +21,11 @@ function ButtonBar(props) {
       <button value={5} onClick={props.handleIterate}>
         Big Next
       </button>
+      <div>|</div>
+      <form onSubmit={handleSubmit}>
+        <input type="text" onChange={(e) => setTheInput(e.target.value)} />
+        <button type="submit">Submit!</button>
+      </form>
     </div>
   );
 }

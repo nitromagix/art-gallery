@@ -1,8 +1,4 @@
 
-img {
-  max-width: 100vh;
-}
-
 
 .App {
   text-align: center;
@@ -41,4 +37,26 @@ img {
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+img {
+  max-width: 100vh;
+}
+
+
+.buttons {
+
+}
+
+.buttons > div {
+  display: inline-block;
+  margin-left:10px;
+  margin-right:10px;
+  font-size: 16px;
+}
+
+form {
+  display: inline-block;
 }
