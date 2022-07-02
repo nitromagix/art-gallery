@@ -15,17 +15,18 @@ function ButtonBar(props) {
       <button value={-1} onClick={props.handleIterate}>
         Back
       </button>
+      <div>|</div>
+      <form onSubmit={handleSubmit}>
+        <input type="text" onChange={(e) => setTheInput(e.target.value)} />
+        <button type="submit">Submit!</button>
+      </form>
+      <div>|</div>
       <button value={1} onClick={props.handleIterate}>
         Next
       </button>
       <button value={5} onClick={props.handleIterate}>
         Big Next
       </button>
-      <div>|</div>
-      <form onSubmit={handleSubmit}>
-        <input type="text" onChange={(e) => setTheInput(e.target.value)} />
-        <button type="submit">Submit!</button>
-      </form>
     </div>
   );
 }

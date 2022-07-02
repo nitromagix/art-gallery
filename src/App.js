@@ -5,7 +5,7 @@ import Gallery from "./Components/Gallery";
 import ButtonBar from "./Components/ButtonBar";
 
 function App() {
-  let [artId, setArtId] = useState(12720);
+  let [artId, setArtId] = useState(22220);
   let [data, setData] = useState({});
 
   // in App.js
@@ -15,7 +15,7 @@ function App() {
   };
 
   const handleInput = (value) => {
-    setArtId(artId + Number(value));
+    setArtId(Number(value));
   };
 
   useEffect(() => {
