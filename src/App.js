@@ -6,7 +6,7 @@ import ButtonBar from "./Components/ButtonBar";
 import trace from "./helper";
 
 function App() {
-   const [artId, setArtId] = useState(22220);
+   const [artId, setArtId] = useState(12720);
    let [data, setData] = useState({});
    const history = useRef([]);
 
@@ -29,7 +29,7 @@ function App() {
          .then((resData) => {
             setData(resData);
             history.current.push(resData);
-            trace("resData")(history.current);
+            trace("history")(history.current);
          });
    }, [artId]);
 
